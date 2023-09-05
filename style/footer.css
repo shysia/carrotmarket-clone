@@ -3,8 +3,8 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100vw;
+    height: 75px;
     padding-bottom: 20px;
-    padding-top: 10px;
     border-top: 1px solid lightgray;
 }
 
@@ -14,13 +14,30 @@ footer{
     align-items: center;
 }
 
+@keyframes icon-move{
+    0%{
+        transform: translateY(3px);
+    }25%{
+        transform: translateY(-8px);
+    }30%{
+        transform: translateY(-9px);
+    }35%{
+        transform: translateY(-8px);
+    }100%{
+        transform: translateY(2px);
+    }
+}
+
+.footer-icon:hover .footer-image{
+    animation: 1.2s icon-move infinite;
+}
+
 .footer-icon img{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     width: 35px;
-    
 }
 
 .footer-icon {
@@ -31,6 +48,7 @@ footer{
     padding: 0 50px 0px 50px;
     overflow: hidden;
     cursor: pointer;
+    height: 80px;
 }
 
 .footer-text {
